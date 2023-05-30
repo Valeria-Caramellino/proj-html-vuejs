@@ -11,6 +11,11 @@ export default {
                 { titolo: "Media" },
                 { titolo: "ShortCode" },
                 { titolo: "Features" },
+            ],
+            ArrayIcone: [
+                { icon: "fa-solid fa-magnifying-glass" },
+                { icon: "fa-regular fa-user" },
+                { icon: "fa-solid fa-bag-shopping" },
             ]
         }
 
@@ -46,9 +51,9 @@ export default {
                     </div>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-end">
-                    <i class="fa-solid fa-magnifying-glass mx-2"></i>
-                    <i class="fa-regular fa-user mx-2"></i>
-                    <i class="fa-solid fa-bag-shopping mx-2"></i>(0)
+                    <template v-for="oggetto in ArrayIcone">
+                        <i class="mx-2" :class="oggetto.icon"></i>
+                    </template>
                     <p class="mx-2 text-warning">€ 0.00</p>
                 </div>
 
