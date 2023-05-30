@@ -9,7 +9,9 @@ export default {
 
 </script>
 <template>
-    <AppTopFooter />
-    <h1>footer</h1>
+    <footer>
+        <AppTopFooter />
+        <h1>footer parte piccola</h1>
+    </footer>
 </template>
 <style lang="scss" scoped></style>
