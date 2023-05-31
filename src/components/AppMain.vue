@@ -44,6 +44,23 @@ export default {
           description: "Support 24 hours a day",
 
         },
+      ],
+      ArrayBrand: [
+        {
+          img: "src/assets/brand-01.png",
+        },
+        {
+          img: "src/assets/brand-02.png",
+        },
+        {
+          img: "src/assets/brand-03.png",
+        },
+        {
+          img: "src/assets/brand-04.png",
+        },
+        {
+          img: "src/assets/brand-05.png",
+        },
       ]
     }
   }
@@ -74,21 +91,25 @@ export default {
         <AppProducts /> <!--carosello1 da fare-->
         <AppSectionDiscount />
         <AppDealOfDay /><!--carosello2 da fare-->
-        <AppCaroselPersonal /><!--carosello 3 da fare-->
-        <AppGameBlog /><!--carosello 4 da fare-->
+      </div>
 
+    </section>
+    <AppCaroselPersonal /><!--carosello 3 da fare-->
+    <AppGameBlog />
+
+    <!--sezione brand-->
+    <section class="container">
+      <div class="row">
+        <div class="col-11 mx-auto my-4 d-flex justify-content-around">
+          <template v-for="oggetto in ArrayBrand">
+            <div class="col-2">
+              <img :src="oggetto.img" alt="">
+            </div>
+          </template>
+
+        </div>
       </div>
     </section>
-
-    <!--
-                                                                                                    <h1>Main:</h1>
-                                                                                                    <ul>
-                                                                                                      <li>deal of the day carosello con oggetti scontati</li>
-                                                                                                      <li>fascia vh50 carosello con puntini</li>
-                                                                                                      <li>blog new game carosello</li>
-                                                                                                      <li>brend</li>
-                                                                                                    </ul>
-                                                                                                    -->
   </main>
 </template>
 
@@ -104,6 +125,13 @@ div {
       color: $orange;
     }
 
+
+  }
+
+  div.col-2 {
+    img {
+      height: 3rem;
+    }
   }
 
   p.titolo {
@@ -113,8 +141,6 @@ div {
   }
 
 }
-
-
 
 p {
   margin: 0;

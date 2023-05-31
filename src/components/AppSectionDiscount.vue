@@ -25,7 +25,7 @@ export default {
 
 </script>
 <template>
-    <div class="col-11 d-flex justify-content-between">
+    <div class="col-11 mx-auto d-flex justify-content-between">
         <template v-for="oggetto in ArrayCards">
             <div class="col-5 my-4">
                 <div class="position-relative">
