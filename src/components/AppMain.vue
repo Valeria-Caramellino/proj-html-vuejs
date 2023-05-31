@@ -3,6 +3,7 @@ import AppSectionTopCard from './AppSectionTopCard.vue';
 import AppSectionSpecialCategory from './AppSectionSpecialCategory.vue';
 import AppProducts from './AppProducts.vue';
 import AppSectionDiscount from './AppSectionDiscount.vue';
+import AppDealOfDay from './AppDealOfDay.vue';
 export default {
   name: "AppMain",
   components: {
@@ -10,6 +11,7 @@ export default {
     AppSectionSpecialCategory,
     AppProducts,
     AppSectionDiscount,
+    AppDealOfDay,
   },
   data() {
     return {
@@ -67,20 +69,21 @@ export default {
         <AppSectionSpecialCategory />
         <AppProducts /> <!--carosello1 da fare-->
         <AppSectionDiscount />
+        <AppDealOfDay /><!--carosello2 da fare-->
 
 
       </div>
     </section>
 
     <!--
-                                                                                <h1>Main:</h1>
-                                                                                <ul>
-                                                                                  <li>deal of the day carosello con oggetti scontati</li>
-                                                                                  <li>fascia vh50 carosello con puntini</li>
-                                                                                  <li>blog new game carosello</li>
-                                                                                  <li>brend</li>
-                                                                                </ul>
-                                                                                -->
+                                                                                    <h1>Main:</h1>
+                                                                                    <ul>
+                                                                                      <li>deal of the day carosello con oggetti scontati</li>
+                                                                                      <li>fascia vh50 carosello con puntini</li>
+                                                                                      <li>blog new game carosello</li>
+                                                                                      <li>brend</li>
+                                                                                    </ul>
+                                                                                    -->
   </main>
 </template>
 
