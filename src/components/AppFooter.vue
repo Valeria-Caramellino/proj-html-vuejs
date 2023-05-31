@@ -15,7 +15,7 @@ export default {
         <section class="container">
             <div class="row">
                 <div class="col-11 mx-auto d-flex justify-content-between">
-                    <div class="col-3">
+                    <div class="col-3 text-secondary">
                         Copyright © 2023 Codezeel
                     </div>
                     <div class="col-3 text-end">
