@@ -38,7 +38,7 @@ export default {
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-8 mx-auto  text-center d-flex flex-column mt-4">
-                    <div class="col-1 mx-auto position-relative mt-4 text-center">
+                    <div class="col-2 mx-auto position-relative mt-4 text-center">
                         <img class=" rounded-circle border border-4 border-warning" :src="ArrayPersonal[active].img" alt="">
                         <div class="position-absolute">
                             <img src="../assets/quote.png" alt="">
