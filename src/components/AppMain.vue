@@ -1,10 +1,15 @@
 <script>
 import AppSectionTopCard from './AppSectionTopCard.vue';
-
+import AppSectionSpecialCategory from './AppSectionSpecialCategory.vue';
+import AppProducts from './AppProducts.vue';
+import AppSectionDiscount from './AppSectionDiscount.vue';
 export default {
   name: "AppMain",
   components: {
     AppSectionTopCard,
+    AppSectionSpecialCategory,
+    AppProducts,
+    AppSectionDiscount,
   },
   data() {
     return {
@@ -52,42 +57,54 @@ export default {
             <div class="col-3 d-flex align-items-center my-5">
               <i :class="oggetto.icon"></i>
               <div>
-                <p>{{ oggetto.title }}</p>
+                <p class="titolo">{{ oggetto.title }}</p>
                 <p class="text-secondary">{{ oggetto.description }}</p>
               </div>
             </div>
           </template>
         </div>
         <AppSectionTopCard />
+        <AppSectionSpecialCategory />
+        <AppProducts /> <!--carosello1 da fare-->
+        <AppSectionDiscount />
+
+
       </div>
     </section>
 
     <!--
-                                                <h1>Main:</h1>
-                                                <ul>
-                                                  <li>piccole icone</li>
-                                                  <li>elemento 2 card uguale o simile ad altro elemento</li>
-                                                  <li>categorie speciali</li>
-                                                  <li>oup products carosello tutti oggetti</li>
-                                                  <li>elemento 2 card uguale o simile al secondo punto</li>
-                                                  <li>deal of the day carosello con oggetti scontati</li>
-                                                  <li>fascia vh50 carosello con puntini</li>
-                                                  <li>blog new game carosello</li>
-                                                  <li>brend</li>
-                                                </ul>
-                                                -->
+                                                                                <h1>Main:</h1>
+                                                                                <ul>
+                                                                                  <li>deal of the day carosello con oggetti scontati</li>
+                                                                                  <li>fascia vh50 carosello con puntini</li>
+                                                                                  <li>blog new game carosello</li>
+                                                                                  <li>brend</li>
+                                                                                </ul>
+                                                                                -->
   </main>
 </template>
 
 <style lang="scss" scoped>
-i {
-  font-size: 2rem;
-  margin-right: 1rem;
+div {
+  i {
+    font-size: 2rem;
+    margin-right: 1rem;
 
-  &:hover {
-    color: #f9aa01;
+    &:hover {
+      color: #f9aa01;
+    }
+
   }
+
+  p.titolo {
+    &:hover {
+      color: #f9aa01;
+    }
+  }
+
 }
+
+
 
 p {
   margin: 0;
