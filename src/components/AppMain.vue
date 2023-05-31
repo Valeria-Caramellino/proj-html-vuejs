@@ -97,7 +97,7 @@ export default {
       </div>
 
     </section>
-    <AppCaroselPersonal /><!--carosello 3 da fare-->
+    <AppCaroselPersonal />
     <AppGameBlog />
 
     <!--sezione brand-->

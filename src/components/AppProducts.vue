@@ -35,6 +35,7 @@ export default {
     </div>
     <!--carosello1---->
 </template>
+
 <style lang="scss" scoped>
 @use'../styles/-Variabili.scss' as*;
 
