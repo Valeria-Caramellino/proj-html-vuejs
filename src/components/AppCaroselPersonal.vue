@@ -11,6 +11,8 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 div.container-fluid {
     background-image: url(../assets/parallax.jpg);
     background-position: center;

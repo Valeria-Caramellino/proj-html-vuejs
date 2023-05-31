@@ -5,6 +5,7 @@ import AppProducts from './AppProducts.vue';
 import AppSectionDiscount from './AppSectionDiscount.vue';
 import AppDealOfDay from './AppDealOfDay.vue';
 import AppCaroselPersonal from './AppCaroselPersonal.vue';
+import AppGameBlog from './AppGameBlog.vue';
 export default {
   name: "AppMain",
   components: {
@@ -14,6 +15,7 @@ export default {
     AppSectionDiscount,
     AppDealOfDay,
     AppCaroselPersonal,
+    AppGameBlog,
   },
   data() {
     return {
@@ -73,37 +75,40 @@ export default {
         <AppSectionDiscount />
         <AppDealOfDay /><!--carosello2 da fare-->
         <AppCaroselPersonal /><!--carosello 3 da fare-->
+        <AppGameBlog /><!--carosello 4 da fare-->
 
       </div>
     </section>
 
     <!--
-                                                                                        <h1>Main:</h1>
-                                                                                        <ul>
-                                                                                          <li>deal of the day carosello con oggetti scontati</li>
-                                                                                          <li>fascia vh50 carosello con puntini</li>
-                                                                                          <li>blog new game carosello</li>
-                                                                                          <li>brend</li>
-                                                                                        </ul>
-                                                                                        -->
+                                                                                                    <h1>Main:</h1>
+                                                                                                    <ul>
+                                                                                                      <li>deal of the day carosello con oggetti scontati</li>
+                                                                                                      <li>fascia vh50 carosello con puntini</li>
+                                                                                                      <li>blog new game carosello</li>
+                                                                                                      <li>brend</li>
+                                                                                                    </ul>
+                                                                                                    -->
   </main>
 </template>
 
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 div {
   i {
     font-size: 2rem;
     margin-right: 1rem;
 
     &:hover {
-      color: #f9aa01;
+      color: $orange;
     }
 
   }
 
   p.titolo {
     &:hover {
-      color: #f9aa01;
+      color: $orange;
     }
   }
 

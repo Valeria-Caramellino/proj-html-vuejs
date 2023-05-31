@@ -49,8 +49,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 hr {
-    color: #f9aa01;
+    color: $orange;
     width: 100%;
     border: 3px solid;
     opacity: 1;
@@ -76,8 +78,8 @@ div.col-3 {
     }
 
     p.shop {
-        color: #f9aa01;
-        border-bottom: 2px solid #f9aa01;
+        color: $orange;
+        border-bottom: 2px solid $orange;
     }
 }
 </style>

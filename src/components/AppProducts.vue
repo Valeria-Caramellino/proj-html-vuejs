@@ -36,8 +36,10 @@ export default {
     <!--carosello1---->
 </template>
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 hr {
-    color: #f9aa01;
+    color: $orange;
     width: 100%;
     border: 3px solid;
     opacity: 1;
@@ -47,7 +49,7 @@ p {
     margin: 0;
 
     &:hover {
-        color: #f9aa01;
+        color: $orange;
     }
 }
 </style>

@@ -29,6 +29,8 @@ export default {
     </section>
 </template>
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 section {
     height: 100vh;
     background-image: url(../assets/main-banner-01.jpg);
@@ -38,7 +40,7 @@ section {
 
         button {
             &:hover {
-                background-color: #f9aa01;
+                background-color: $orange;
                 color: #ffffff;
             }
         }

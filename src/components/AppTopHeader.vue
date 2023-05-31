@@ -65,6 +65,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 section {
 
     hr,
@@ -72,7 +74,7 @@ section {
         margin: 0;
 
         &:hover {
-            color: #F9aa01;
+            color: $orange;
             cursor: pointer;
         }
     }
