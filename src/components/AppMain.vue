@@ -71,11 +71,13 @@ export default {
 </script>
 
 <template>
+  <!-----------------nel main troviamo sezione iniziale e finale il resto gestito dalle APP esterne------->
   <main>
     <!--sezione piccole icone-->
     <section class="container">
       <div class="row">
         <div class="col-11 mx-auto d-flex justify-content-center">
+
           <template v-for="oggetto in ArrayObjetTopMain">
             <div class="col-3 d-flex align-items-center my-5">
               <i :class="oggetto.icon"></i>
@@ -85,6 +87,7 @@ export default {
               </div>
             </div>
           </template>
+
         </div>
         <AppSectionTopCard />
         <AppSectionSpecialCategory />
@@ -101,6 +104,7 @@ export default {
     <section class="container">
       <div class="row">
         <div class="col-11 mx-auto my-4 d-flex justify-content-around">
+
           <template v-for="oggetto in ArrayBrand">
             <div class="col-2">
               <img :src="oggetto.img" alt="">
