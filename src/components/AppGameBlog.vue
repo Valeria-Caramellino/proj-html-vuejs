@@ -83,6 +83,8 @@ div.col-3 {
 
     div.my-class {
         display: none;
+
+
     }
 
     img {
