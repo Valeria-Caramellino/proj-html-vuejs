@@ -148,7 +148,7 @@ export default {
     <div class="col-11 mx-auto my-4 d-flex justify-content-between align-items-center position-relative">
 
 
-        <div class="my-width border border-light mx-1 my-2">
+        <div class="my-width mx-1 my-2">
             <img :src="ArrayObjetc[zero].img" alt="">
             <div class="my-bg-fascia">
                 <span v-for="voto in stelline">
@@ -176,7 +176,7 @@ export default {
 
         </div>
 
-        <div class="my-width border border-light mx-1 my-2">
+        <div class="my-width  mx-1 my-2">
             <img :src="ArrayObjetc[primo].img" alt="">
             <div class="my-bg-fascia">
                 <span v-for="voto in stelline">
@@ -203,7 +203,7 @@ export default {
             </div>
         </div>
 
-        <div class="my-width border border-light mx-1 my-2">
+        <div class="my-width mx-1 my-2">
             <img :src="ArrayObjetc[secondo].img" alt="">
             <div class="my-bg-fascia">
                 <span v-for="voto in stelline">
@@ -229,7 +229,7 @@ export default {
             </div>
         </div>
 
-        <div class="my-width border border-light mx-1 my-2">
+        <div class="my-width mx-1 my-2">
             <img :src="ArrayObjetc[terzo].img" alt="">
             <div class="my-bg-fascia">
                 <span v-for="voto in stelline">

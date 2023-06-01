@@ -91,9 +91,9 @@ export default {
         </div>
         <AppSectionTopCard />
         <AppSectionSpecialCategory />
-        <AppProducts /> <!--carosello1 da fare-->
+        <AppProducts />
         <AppSectionDiscount />
-        <AppDealOfDay /><!--carosello2 da fare-->
+        <AppDealOfDay />
       </div>
 
     </section>
