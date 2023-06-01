@@ -1,4 +1,5 @@
 <script>
+import { store } from '../data/store'
 export default {
     name: "AppProducts",
     data() {
@@ -14,116 +15,54 @@ export default {
                     title: "Best Sellers"
                 },
             ],
-            ArrayObjetc: [
-                {
-                    img: "src/assets/01-327x327.jpg",
-                    voto: "4",
-                    title: "Labyriths of the world",
-                    prezzo: "€ 50.00",
-                },
-                {
-                    img: "src/assets/02-327x327.jpg",
-                    voto: "3",
-                    title: "Cuffie",
-                    prezzo: "€ 40.00",
-                },
-                {
-                    img: "src/assets/03-327x327.jpg",
-                    voto: "2",
-                    title: "Copri Sedia",
-                    prezzo: "€ 45.00",
-                },
-                {
-                    img: "src/assets/04-327x327.jpg",
-                    voto: "3",
-                    title: "Joystick",
-                    prezzo: "€ 10.00",
-                },
-                {
-                    img: "src/assets/05-327x327.jpg",
-                    voto: "5",
-                    title: "VR",
-                    prezzo: "€ 22.00",
-                },
-                {
-                    img: "src/assets/06-327x327.jpg",
-                    voto: "1",
-                    title: "Cuffie con filo",
-                    prezzo: "€ 50.00",
-                },
-                {
-                    img: "src/assets/07-327x327.jpg",
-                    voto: "2",
-                    title: "Joystick Red",
-                    prezzo: "€ 46.00",
-                },
-                {
-                    img: "src/assets/08-327x327.jpg",
-                    voto: "3",
-                    title: "Joystick Blue",
-                    prezzo: "€ 10.00",
-                },
-
-            ],
-            ArrayIcone: [
-                { icon: "fa-solid fa-bag-shopping" },
-                { icon: "fa-solid fa-heart" },
-                { icon: "fa-solid fa-up-down-left-right" },
-                { icon: "fa-solid fa-eye" },
-            ],
-            stelline: 5,
-            zero: 0,
-            primo: 1,
-            secondo: 2,
-            terzo: 3,
-
+            store
         }
     },
     methods: {
         changeNext() {
-            if (this.zero == 7) {
-                this.zero = 0
+            if (this.store.zero == 7) {
+                this.store.zero = 0
             } else {
-                this.zero++
+                this.store.zero++
             }
-            if (this.primo == 7) {
-                this.primo = 0
+            if (this.store.primo == 7) {
+                this.store.primo = 0
             } else {
-                this.primo++
+                this.store.primo++
             }
-            if (this.secondo == 7) {
-                this.secondo = 0
+            if (this.store.secondo == 7) {
+                this.store.secondo = 0
             } else {
-                this.secondo++
+                this.store.secondo++
             }
-            if (this.terzo == 7) {
-                this.terzo = 0
+            if (this.store.terzo == 7) {
+                this.store.terzo = 0
             } else {
-                this.terzo++
+                this.store.terzo++
             }
         },
         changePrev() {
-            if (this.zero == 0) {
-                this.zero = 7
+            if (this.store.zero == 0) {
+                this.store.zero = 7
             } else {
-                this.zero--
+                this.store.zero--
             }
 
-            if (this.primo == 0) {
-                this.primo = 7
+            if (this.store.primo == 0) {
+                this.store.primo = 7
             } else {
-                this.primo--
+                this.store.primo--
             }
 
-            if (this.secondo == 0) {
-                this.secondo = 7
+            if (this.store.secondo == 0) {
+                this.store.secondo = 7
             } else {
-                this.secondo--
+                this.store.secondo--
             }
-            if (this.terzo == 0) {
-                this.terzo = 7
+            if (this.store.terzo == 0) {
+                this.store.terzo = 7
             } else {
-                this.terzo--
+                this.store.terzo--
             }
         }
     }
@@ -149,23 +88,23 @@ export default {
 
 
         <div class="my-width mx-1 my-2">
-            <img :src="ArrayObjetc[zero].img" alt="">
+            <img :src="store.ArrayObjetcProducts[store.zero].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in stelline">
-                    <template v-if="ArrayObjetc[zero].voto >= voto">
+                <span v-for="voto in store.stelline">
+                    <template v-if="store.ArrayObjetcProducts[store.zero].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ ArrayObjetc[zero].title }}</p>
+                <p>{{ store.ArrayObjetcProducts[store.zero].title }}</p>
                 <div class="prezzo">
-                    <p>{{ ArrayObjetc[zero].prezzo }}</p>
+                    <p>{{ store.ArrayObjetcProducts[store.zero].prezzo }}</p>
 
                 </div>
-                <div class="border border-light icone">
-                    <template v-for="oggetto in ArrayIcone">
+                <div class="border-top border-light border-opacity-25 icone">
+                    <template v-for="oggetto in store.ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -175,51 +114,24 @@ export default {
             </div>
 
         </div>
-
-        <div class="my-width  mx-1 my-2">
-            <img :src="ArrayObjetc[primo].img" alt="">
-            <div class="my-bg-fascia">
-                <span v-for="voto in stelline">
-                    <template v-if="ArrayObjetc[primo].voto >= voto">
-                        <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
-                    </template>
-                    <template v-else>
-                        <i class="fa-solid fa-star"></i>
-                    </template>
-                </span>
-                <p>{{ ArrayObjetc[primo].title }}</p>
-                <div class="prezzo">
-                    <p>{{ ArrayObjetc[primo].prezzo }}</p>
-
-                </div>
-                <div class="border border-light icone">
-                    <template v-for="oggetto in ArrayIcone">
-                        <div class="col-3 text-center">
-                            <i class="mx-2" :class="oggetto.icon"></i>
-                        </div>
-                    </template>
-                </div>
-
-            </div>
-        </div>
-
         <div class="my-width mx-1 my-2">
-            <img :src="ArrayObjetc[secondo].img" alt="">
+            <img :src="store.ArrayObjetcProducts[store.primo].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in stelline">
-                    <template v-if="ArrayObjetc[secondo].voto >= voto">
+                <span v-for="voto in store.stelline">
+                    <template v-if="store.ArrayObjetcProducts[store.primo].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ ArrayObjetc[secondo].title }}</p>
+                <p>{{ store.ArrayObjetcProducts[store.primo].title }}</p>
                 <div class="prezzo">
-                    <p>{{ ArrayObjetc[secondo].prezzo }}</p>
+                    <p>{{ store.ArrayObjetcProducts[store.primo].prezzo }}</p>
+
                 </div>
-                <div class="border border-light icone">
-                    <template v-for="oggetto in ArrayIcone">
+                <div class="border-top border-light border-opacity-25 icone">
+                    <template v-for="oggetto in store.ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -227,25 +139,26 @@ export default {
                 </div>
 
             </div>
+
         </div>
-
         <div class="my-width mx-1 my-2">
-            <img :src="ArrayObjetc[terzo].img" alt="">
+            <img :src="store.ArrayObjetcProducts[store.secondo].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in stelline">
-                    <template v-if="ArrayObjetc[terzo].voto >= voto">
+                <span v-for="voto in store.stelline">
+                    <template v-if="store.ArrayObjetcProducts[store.secondo].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ ArrayObjetc[terzo].title }}</p>
+                <p>{{ store.ArrayObjetcProducts[store.secondo].title }}</p>
                 <div class="prezzo">
-                    <p>{{ ArrayObjetc[terzo].prezzo }}</p>
+                    <p>{{ store.ArrayObjetcProducts[store.secondo].prezzo }}</p>
+
                 </div>
-                <div class="border border-light icone">
-                    <template v-for="oggetto in ArrayIcone">
+                <div class="border-top border-light border-opacity-25 icone">
+                    <template v-for="oggetto in store.ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -253,6 +166,34 @@ export default {
                 </div>
 
             </div>
+
+        </div>
+        <div class="my-width mx-1 my-2">
+            <img :src="store.ArrayObjetcProducts[store.terzo].img" alt="">
+            <div class="my-bg-fascia">
+                <span v-for="voto in store.stelline">
+                    <template v-if="store.ArrayObjetcProducts[store.terzo].voto >= voto">
+                        <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
+                    </template>
+                    <template v-else>
+                        <i class="fa-solid fa-star"></i>
+                    </template>
+                </span>
+                <p>{{ store.ArrayObjetcProducts[store.terzo].title }}</p>
+                <div class="prezzo">
+                    <p>{{ store.ArrayObjetcProducts[store.terzo].prezzo }}</p>
+
+                </div>
+                <div class="border-top border-light border-opacity-25 icone">
+                    <template v-for="oggetto in store.ArrayIcone">
+                        <div class="col-3 text-center">
+                            <i class="mx-2" :class="oggetto.icon"></i>
+                        </div>
+                    </template>
+                </div>
+
+            </div>
+
         </div>
 
         <button
@@ -305,6 +246,10 @@ div.my-width {
                 display: flex !important;
                 height: 32px;
             }
+        }
+
+        div.prezzo {
+            color: $orange;
         }
 
         div.icone {
