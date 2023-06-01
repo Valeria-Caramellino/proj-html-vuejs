@@ -9,19 +9,19 @@ export default {
                     img: "src/assets/t5-1-100x100_left.jpg",
                     name: "Luies Charls",
                     ruolo: "(Web Designer)",
-                    storia: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptas rem. Deleniti repellendus molestiae nostrum qui fugiat, fugit cumque iure! Quo, perferendis obcaecati!Iure cum cumque accusamus mollitia"
+                    storia: "'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptas rem. Deleniti repellendus molestiae nostrum qui fugiat, fugit cumque iure! Quo, perferendis obcaecati!Iure cum cumque accusamus mollitia'"
                 },
                 {
                     img: "src/assets/t2-1-100x100_left.jpg",
                     name: "Marco Charls",
                     ruolo: "(Web Developer)",
-                    storia: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptas rem. Deleniti repellendus molestiae nostrum qui fugiat, fugit cumque iure! Quo, perferendis obcaecati!Iure cum cumque accusamus mollitia"
+                    storia: "'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptas rem. Deleniti repellendus molestiae nostrum qui fugiat, fugit cumque iure! Quo, perferendis obcaecati!Iure cum cumque accusamus mollitia'"
                 },
                 {
                     img: "src/assets/t4-1-100x100_left.jpg",
                     name: "Gigi Charls",
                     ruolo: "(Web)",
-                    storia: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptas rem. Deleniti repellendus molestiae nostrum qui fugiat, fugit cumque iure! Quo, perferendis obcaecati!Iure cum cumque accusamus mollitia"
+                    storia: "'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptas rem. Deleniti repellendus molestiae nostrum qui fugiat, fugit cumque iure! Quo, perferendis obcaecati!Iure cum cumque accusamus mollitia'"
                 },
             ]
         }
