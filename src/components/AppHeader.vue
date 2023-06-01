@@ -15,6 +15,7 @@ export default {
     <header>
         <AppTopHeader />
         <AppBottonHeader />
+
     </header>
 </template>
 

@@ -25,7 +25,7 @@ export default {
 
 </script>
 <template>
-    <section class="container text-secondary">
+    <section id="su" class="container text-secondary">
         <div class="row">
             <div class="col-11 d-flex justify-content-between mx-auto">
                 <div class="col-4 d-flex ">

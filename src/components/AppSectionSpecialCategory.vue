@@ -26,10 +26,13 @@ export default {
 </script>
 
 <template>
-    <div class="col-11 mx-auto">
+    <div class="col-11 mx-auto position-relative">
         <h2 class="text-center mt-5">Special Category</h2>
         <div class="col-1 mx-auto">
             <hr>
+        </div>
+        <div class=" my-width position-absolute d-flex justify-content-center align-items-center">
+            <a href="#su"><i class="fa-solid fa-angles-up"></i></a>
         </div>
     </div>
     <div class="col-11 mx-auto d-flex justify-content-between">
@@ -51,6 +54,21 @@ export default {
 
 <style lang="scss" scoped>
 @use'../styles/-Variabili.scss' as*;
+
+div.col-11 {
+    div.my-width {
+        width: 30px;
+        height: 30px;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: $orange;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
 
 div.col-1 {
     hr {
