@@ -92,12 +92,12 @@ div.col-3 {
     }
 
     i {
-        color: $orange;
+        color: $primary;
     }
 }
 
 hr {
-    color: $orange;
+    color: $primary;
     width: 100%;
     border: 3px solid;
     opacity: 1;

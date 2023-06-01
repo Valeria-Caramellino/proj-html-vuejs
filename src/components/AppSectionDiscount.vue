@@ -59,7 +59,7 @@ div.my-misure {
 
     div.skewed {
         transform: skew(-20deg);
-        background-color: $orange;
+        background-color: $primary;
 
         h4 {
             font-weight: 600;

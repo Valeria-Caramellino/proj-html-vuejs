@@ -79,12 +79,12 @@ section.container-fluid {
     }
 
     span.my-color {
-        color: $orange;
+        color: $primary;
     }
 
     button {
         &:hover {
-            background-color: $orange;
+            background-color: $primary;
         }
     }
 }

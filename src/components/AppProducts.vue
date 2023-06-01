@@ -92,7 +92,7 @@ export default {
             <div class="my-bg-fascia">
                 <span v-for="voto in store.stelline">
                     <template v-if="store.ArrayObjetcProducts[store.zero].voto >= voto">
-                        <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
+                        <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
@@ -119,7 +119,7 @@ export default {
             <div class="my-bg-fascia">
                 <span v-for="voto in store.stelline">
                     <template v-if="store.ArrayObjetcProducts[store.primo].voto >= voto">
-                        <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
+                        <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
@@ -146,7 +146,7 @@ export default {
             <div class="my-bg-fascia">
                 <span v-for="voto in store.stelline">
                     <template v-if="store.ArrayObjetcProducts[store.secondo].voto >= voto">
-                        <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
+                        <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
@@ -173,7 +173,7 @@ export default {
             <div class="my-bg-fascia">
                 <span v-for="voto in store.stelline">
                     <template v-if="store.ArrayObjetcProducts[store.terzo].voto >= voto">
-                        <i class="fa-solid fa-star" style="color: #f9aa01;"></i>
+                        <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
@@ -213,7 +213,7 @@ export default {
 @use'../styles/-Variabili.scss' as*;
 
 hr {
-    color: $orange;
+    color: $primary;
     width: 100%;
     border: 3px solid;
     opacity: 1;
@@ -223,7 +223,7 @@ p.titolo {
     margin: 0;
 
     &:hover {
-        color: $orange;
+        color: $primary;
     }
 }
 
@@ -249,7 +249,7 @@ div.my-width {
         }
 
         div.prezzo {
-            color: $orange;
+            color: $primary;
         }
 
         div.icone {

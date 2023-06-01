@@ -126,7 +126,7 @@ div {
     margin-right: 1rem;
 
     &:hover {
-      color: $orange;
+      color: $primary;
     }
 
 
@@ -140,7 +140,7 @@ div {
 
   p.titolo {
     &:hover {
-      color: $orange;
+      color: $primary;
     }
   }
 

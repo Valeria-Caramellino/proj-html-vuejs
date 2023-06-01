@@ -54,7 +54,7 @@ export default {
                     <template v-for="oggetto in ArrayIcone">
                         <i class="mx-2" :class="oggetto.icon"></i>
                     </template>
-                    <p class="mx-2 text-warning">(0) €0.00</p>
+                    <p class="mx-2 color">(0) €0.00</p>
                 </div>
 
             </div>
@@ -68,13 +68,16 @@ export default {
 @use'../styles/-Variabili.scss' as*;
 
 section {
+    p.color {
+        color: $primary;
+    }
 
     hr,
     p {
         margin: 0;
 
         &:hover {
-            color: $orange;
+            color: $primary;
             cursor: pointer;
         }
     }

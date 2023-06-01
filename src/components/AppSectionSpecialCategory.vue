@@ -64,7 +64,7 @@ div.col-11 {
         height: 30px;
         bottom: 2rem;
         right: 2rem;
-        background-color: $orange;
+        background-color: $primary;
         transform: rotate(45deg);
 
         div.trasform {
@@ -80,7 +80,7 @@ div.col-11 {
 
 div.col-1 {
     hr {
-        color: $orange;
+        color: $primary;
         width: 100%;
         border: 3px solid;
         opacity: 1;
@@ -115,7 +115,7 @@ div.col-3 {
         hr {
             width: 30%;
             margin: 0.5rem;
-            color: $orange;
+            color: $primary;
             border: 1px solid;
             opacity: 1;
         }
@@ -123,7 +123,7 @@ div.col-3 {
 
 
     p.shop {
-        color: $orange;
+        color: $primary;
         margin-bottom: 0;
 
     }

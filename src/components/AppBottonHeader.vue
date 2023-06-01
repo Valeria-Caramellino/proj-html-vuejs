@@ -48,7 +48,7 @@ section {
 
     div.skewed {
         transform: skew(-20deg);
-        background-color: $orange;
+        background-color: $primary;
 
         h3 {
             font-weight: 600;
@@ -60,7 +60,7 @@ section {
         height: 30px;
         bottom: 2rem;
         right: 6rem;
-        background-color: $orange;
+        background-color: $primary;
         transform: rotate(45deg);
 
         div.trasform {
@@ -78,7 +78,7 @@ section {
 
         button {
             &:hover {
-                background-color: $orange;
+                background-color: $primary;
                 color: #ffffff;
             }
         }

@@ -36,13 +36,13 @@ export default {
             <div class="col-11 mx-auto d-flex justify-content-around">
                 <div class="col-3 my-4">
                     <h4>Address Info</h4>
-                    <p class="text-secondary"><i class="fa-solid fa-location-dot mx-1" style="color: #f9aa01"></i>60 29th
+                    <p class="text-secondary"><i class="fa-solid fa-location-dot mx-1" style="color: #ef5d60"></i>60 29th
                         Strett
                         San Francisco,America</p>
-                    <p class="text-secondary"><i class="fa-solid fa-phone mx-1" style="color: #f9aa01;"></i>(+00)123-456-789
+                    <p class="text-secondary"><i class="fa-solid fa-phone mx-1" style="color: #ef5d60;"></i>(+00)123-456-789
                     </p>
                     <p class="text-secondary"> <i class="fa-solid fa-envelope mx-1"
-                            style="color: #f9aa01"></i>demo@example.com
+                            style="color: #ef5d60"></i>demo@example.com
                     </p>
                 </div>
                 <template v-for="(oggetto, i) in ArrayInfo">
@@ -77,7 +77,7 @@ export default {
 
 i {
     &:hover {
-        color: $orange;
+        color: $primary;
     }
 }
 
@@ -86,7 +86,7 @@ p {
     margin: 0.25rem;
 
     &:hover {
-        color: $orange !important;
+        color: $primary !important;
     }
 }
 </style>
