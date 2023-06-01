@@ -36,9 +36,10 @@ export default {
         <template v-for="oggetto in ArrayCardSpecial">
             <div class="col-3 position-relative my-4">
                 <img :src="oggetto.img" alt="">
-                <div class="position-absolute bottom-0 start-0 mx-2">
-                    <h4>{{ oggetto.title }}</h4>
-                    <p class="shop">Shop Now</p>
+                <div class="position-absolute bottom-0 start-0 bg-black bg-opacity-50 w-100">
+                    <h4 class="mx-1">{{ oggetto.title }}</h4>
+                    <p class="shop mx-1">Shop Now</p>
+                    <hr>
                 </div>
 
                 <button class="position-absolute top-50 start-50 translate-middle p-2 rounded">{{ oggetto.title }}</button>
@@ -51,12 +52,15 @@ export default {
 <style lang="scss" scoped>
 @use'../styles/-Variabili.scss' as*;
 
-hr {
-    color: $orange;
-    width: 100%;
-    border: 3px solid;
-    opacity: 1;
+div.col-1 {
+    hr {
+        color: $orange;
+        width: 100%;
+        border: 3px solid;
+        opacity: 1;
+    }
 }
+
 
 div.col-3 {
 
@@ -70,6 +74,10 @@ div.col-3 {
         button {
             display: block;
         }
+
+        div.bg-black {
+            --bs-bg-opacity: 0.8;
+        }
     }
 
     button {
@@ -77,9 +85,21 @@ div.col-3 {
 
     }
 
+    div.position-absolute {
+        hr {
+            width: 30%;
+            margin: 0.5rem;
+            color: $orange;
+            border: 1px solid;
+            opacity: 1;
+        }
+    }
+
+
     p.shop {
         color: $orange;
-        border-bottom: 2px solid $orange;
+        margin-bottom: 0;
+
     }
 }
 </style>
