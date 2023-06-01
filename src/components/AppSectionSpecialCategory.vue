@@ -32,7 +32,10 @@ export default {
             <hr>
         </div>
         <div class=" my-width position-absolute d-flex justify-content-center align-items-center">
-            <a href="#su"><i class="fa-solid fa-angles-up"></i></a>
+            <div class="trasform">
+                <a href="#su"><i class="fa-solid fa-angles-up"></i></a>
+            </div>
+
         </div>
     </div>
     <div class="col-11 mx-auto d-flex justify-content-between">
@@ -62,6 +65,11 @@ div.col-11 {
         bottom: 2rem;
         right: 2rem;
         background-color: $orange;
+        transform: rotate(45deg);
+
+        div.trasform {
+            transform: rotate(-45deg);
+        }
     }
 
     a {

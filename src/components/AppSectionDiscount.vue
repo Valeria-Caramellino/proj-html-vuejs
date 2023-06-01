@@ -31,7 +31,7 @@ export default {
                 <div class="position-relative">
                     <img :src="oggetto.img" alt="">
                     <div class="position-absolute top-0 start-50 my-misure text-center ">
-                        <div class="bg-warning">
+                        <div class="skewed">
                             <h4 class="text-black py-2">{{ oggetto.description }}</h4>
                         </div>
 
@@ -46,6 +46,8 @@ export default {
     </div>
 </template>
 <style lang="scss" scoped>
+@use'../styles/-Variabili.scss' as*;
+
 img {
     width: 100%;
 }
@@ -54,5 +56,14 @@ div.my-misure {
     padding-top: 2rem;
     width: 40%;
     height: 60%;
+
+    div.skewed {
+        transform: skew(-20deg);
+        background-color: $orange;
+
+        h4 {
+            font-weight: 600;
+        }
+    }
 }
 </style>
