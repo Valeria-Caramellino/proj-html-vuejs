@@ -72,6 +72,11 @@ section.container-fluid {
     background-position: center;
     height: 60vh;
 
+    img.border-warning {
+        --bs-border-opacity: 1;
+        border-color: $primary !important;
+    }
+
     .position-absolute {
         position: absolute !important;
         top: 0;
