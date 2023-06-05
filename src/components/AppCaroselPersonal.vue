@@ -40,8 +40,8 @@ export default {
                 <div class="col-8 mx-auto  text-center d-flex flex-column mt-4">
                     <div class="col-2 mx-auto position-relative mt-4 text-center">
                         <img class=" rounded-circle border border-4 border-warning" :src="ArrayPersonal[active].img" alt="">
-                        <div class="position-absolute">
-                            <img src="../assets/quote.png" alt="">
+                        <div class="position-absolute rounded-circle bg-warning">
+                            <img class="py-2 px-2" src="../assets/quote.png" alt="">
                         </div>
 
                     </div>
@@ -75,6 +75,10 @@ section.container-fluid {
     img.border-warning {
         --bs-border-opacity: 1;
         border-color: $primary !important;
+    }
+
+    div.bg-warning {
+        background-color: $primary !important;
     }
 
     .position-absolute {
