@@ -1,19 +1,16 @@
 <script>
-import AppSectionTopCard from './AppSectionTopCard.vue';
+import AppSection2Card from './AppSection2Card.vue';
 import AppSectionSpecialCategory from './AppSectionSpecialCategory.vue';
-import AppProducts from './AppProducts.vue';
-import AppSectionDiscount from './AppSectionDiscount.vue';
-import AppDealOfDay from './AppDealOfDay.vue';
+import AppCarosello from './AppCarosello.vue';
 import AppCaroselPersonal from './AppCaroselPersonal.vue';
 import AppGameBlog from './AppGameBlog.vue';
+import { store } from '../data/store';
 export default {
   name: "AppMain",
   components: {
-    AppSectionTopCard,
+    AppSection2Card,
     AppSectionSpecialCategory,
-    AppProducts,
-    AppSectionDiscount,
-    AppDealOfDay,
+    AppCarosello,
     AppCaroselPersonal,
     AppGameBlog,
   },
@@ -61,7 +58,9 @@ export default {
         {
           img: "src/assets/brand-05.png",
         },
-      ]
+      ],
+
+      store,
     }
   }
 
@@ -71,11 +70,11 @@ export default {
 </script>
 
 <template>
-  <!-----------------nel main troviamo sezione iniziale e finale il resto gestito dalle APP esterne------->
   <main>
-    <!--sezione piccole icone-->
+
     <section class="container">
       <div class="row">
+        <!--sezione piccole icone iniziale-->
         <div class="col-11 mx-auto d-flex justify-content-center">
 
           <template v-for="oggetto in ArrayObjetTopMain">
@@ -89,15 +88,27 @@ export default {
           </template>
 
         </div>
-        <AppSectionTopCard />
+        <!--sezione due card riutilizzabile usando un array preso store-->
+        <AppSection2Card :items="store.ArrayCards1" />
+
+        <!--sezione a se categorie speciali 3 card-->
         <AppSectionSpecialCategory />
-        <AppProducts />
-        <AppSectionDiscount />
-        <AppDealOfDay />
+
+        <!--sezione carosello riutilizzabile-->
+        <AppCarosello :items="store.ArrayObjetcProducts" title="Our Products" :array="store.ArrayCategory" />
+
+        <!--sezione riutilizzata con array diverso-->
+        <AppSection2Card :items="store.ArrayCards2" />
+
+        <!--sezione carosello riutilizzata-->
+        <AppCarosello :items="store.ArrayObjetcOfDay" :array="store.ArrayCategory1" title="Deal of the day" />
       </div>
 
     </section>
+    <!--carosello del personale con puntino-->
     <AppCaroselPersonal />
+
+    <!--sezione blog-->
     <AppGameBlog />
 
     <!--sezione brand-->

@@ -13,7 +13,10 @@ export default {
 
 <template>
     <header>
+        <!--sezione tesata parte alta-->
         <AppTopHeader />
+
+        <!--sezione testata con img 100vh-->
         <AppBottonHeader />
 
     </header>

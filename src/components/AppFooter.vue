@@ -10,8 +10,11 @@ export default {
 </script>
 <template>
     <footer class="mt-4">
+
+        <!--sezione alta del footer-->
         <AppTopFooter />
 
+        <!--sezione bassa del footer-->
         <section class="container">
             <div class="row">
                 <div class="col-11 mx-auto d-flex justify-content-between">

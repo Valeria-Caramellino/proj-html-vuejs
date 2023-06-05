@@ -101,15 +101,57 @@ export const store = reactive({
       prezzo: "€ 10.00",
     },
   ],
-  ArrayIcone: [
-    { icon: "fa-solid fa-bag-shopping" },
-    { icon: "fa-solid fa-heart" },
-    { icon: "fa-solid fa-up-down-left-right" },
-    { icon: "fa-solid fa-eye" },
+  ArrayCategory: [
+    {
+      title: "Featured",
+    },
+    {
+      title: "New Arrival",
+    },
+    {
+      title: "Best Sellers",
+    },
   ],
-  stelline: 5,
-  zero: 0,
-  primo: 1,
-  secondo: 2,
-  terzo: 3,
+  ArrayCategory1: [
+    {
+      title: "1026 day",
+    },
+    {
+      title: "13 hours",
+    },
+    {
+      title: "24 mins",
+    },
+    {
+      title: "17 sec",
+    },
+  ],
+  ArrayCards1: [
+    {
+      description: "Most Popular",
+      title: "The BattleField 4",
+      subTitle: "Naval Strike",
+      img: "src/assets/cms-banner-01.jpg",
+    },
+    {
+      description: "Lastest Game",
+      title: "Assassin's Creed",
+      subTitle: "Unity Game",
+      img: "src/assets/cms-banner-02.jpg",
+    },
+  ],
+  ArrayCards2: [
+    {
+      description: "20% Discount",
+      title: "Dragon's Dogma",
+      subTitle: "Video Game",
+      img: "src/assets/cms-banner-03.jpg",
+    },
+    {
+      description: "30% Discount",
+      title: "World Of Tanks",
+      subTitle: "New Game",
+      img: "src/assets/cms-banner-04.jpg",
+    },
+  ],
 });

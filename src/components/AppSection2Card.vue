@@ -1,33 +1,23 @@
 <script>
 
 export default {
-    name: "AppSectionDiscount",
+    name: "AppSection2Card",
+    props: {
+        items: Array,
+    },
     data() {
         return {
-            ArrayCards: [
-                {
-                    description: "20% Discount",
-                    title: "Dragon's Dogma",
-                    subTitle: "Video Game",
-                    img: "src/assets/cms-banner-03.jpg"
-                },
-                {
-                    description: "30% Discount",
-                    title: "World Of Tanks",
-                    subTitle: "New Game",
-                    img: "src/assets/cms-banner-04.jpg"
-                },
-            ]
+
         }
     }
-
 }
 
 </script>
+
 <template>
     <div class="col-11 mx-auto d-flex justify-content-between">
-        <template v-for="oggetto in ArrayCards">
-            <div class="col-5 my-4">
+        <template v-for="oggetto in items">
+            <div class="col-5 ">
                 <div class="position-relative">
                     <img :src="oggetto.img" alt="">
                     <div class="position-absolute top-0 start-50 my-misure text-center ">
@@ -45,12 +35,15 @@ export default {
 
     </div>
 </template>
+
 <style lang="scss" scoped>
 @use'../styles/-Variabili.scss' as*;
 
 img {
     width: 100%;
 }
+
+
 
 div.my-misure {
     padding-top: 2rem;

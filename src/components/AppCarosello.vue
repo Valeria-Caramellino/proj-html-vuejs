@@ -1,87 +1,87 @@
 <script>
-import { store } from '../data/store'
+
 export default {
-    name: "AppDealOfDay",
+    name: "AppCarosello",
+    props: {
+        items: Array,
+        title: String,
+        array: Array,
+    },
     data() {
         return {
-            ArrayCategory: [
-                {
-                    title: "1026 day"
-                },
-                {
-                    title: "13 hours"
-                },
-                {
-                    title: "24 mins"
-                },
-                {
-                    title: "17 sec"
-                }
+            ArrayIcone: [
+                { icon: "fa-solid fa-bag-shopping" },
+                { icon: "fa-solid fa-heart" },
+                { icon: "fa-solid fa-up-down-left-right" },
+                { icon: "fa-solid fa-eye" },
             ],
-            store,
+            stelline: 5,
+            zero: 0,
+            primo: 1,
+            secondo: 2,
+            terzo: 3,
         }
     },
     methods: {
         changeNext() {
-            if (this.store.zero == 7) {
-                this.store.zero = 0
+            if (this.zero == 7) {
+                this.zero = 0
             } else {
-                this.store.zero++
+                this.zero++
             }
-            if (this.store.primo == 7) {
-                this.store.primo = 0
+            if (this.primo == 7) {
+                this.primo = 0
             } else {
-                this.store.primo++
+                this.primo++
             }
-            if (this.store.secondo == 7) {
-                this.store.secondo = 0
+            if (this.secondo == 7) {
+                this.secondo = 0
             } else {
-                this.store.secondo++
+                this.secondo++
             }
-            if (this.store.terzo == 7) {
-                this.store.terzo = 0
+            if (this.terzo == 7) {
+                this.terzo = 0
             } else {
-                this.store.terzo++
+                this.terzo++
             }
         },
         changePrev() {
-            if (this.store.zero == 0) {
-                this.store.zero = 7
+            if (this.zero == 0) {
+                this.zero = 7
             } else {
-                this.store.zero--
+                this.zero--
             }
 
-            if (this.store.primo == 0) {
-                this.store.primo = 7
+            if (this.primo == 0) {
+                this.primo = 7
             } else {
-                this.store.primo--
+                this.primo--
             }
 
-            if (this.store.secondo == 0) {
-                this.store.secondo = 7
+            if (this.secondo == 0) {
+                this.secondo = 7
             } else {
-                this.store.secondo--
+                this.secondo--
             }
-            if (this.store.terzo == 0) {
-                this.store.terzo = 7
+            if (this.terzo == 0) {
+                this.terzo = 7
             } else {
-                this.store.terzo--
+                this.terzo--
             }
         }
     }
 }
 </script>
-
 <template>
     <div class="col-11 mx-auto my-4">
 
-        <h2 class="text-center">Deal of the Day </h2>
+        <h2 class="text-center">{{ title }}</h2>
         <div class="col-1 mx-auto">
             <hr>
         </div>
     </div>
     <div class="col-11 mx-auto d-flex justify-content-center">
-        <template v-for="oggetto in ArrayCategory">
+        <template v-for="oggetto in array">
             <div class="col-2 py-1 px-3 text-center border border-light border-opacity-25">
                 <p class="titolo">{{ oggetto.title }}</p>
             </div>
@@ -91,23 +91,23 @@ export default {
 
 
         <div class="my-width mx-1 my-2">
-            <img :src="store.ArrayObjetcOfDay[store.zero].img" alt="">
+            <img :src="items[zero].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in store.stelline">
-                    <template v-if="store.ArrayObjetcOfDay[store.zero].voto >= voto">
+                <span v-for="voto in stelline">
+                    <template v-if="items[zero].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ store.ArrayObjetcOfDay[store.zero].title }}</p>
+                <p>{{ items[zero].title }}</p>
                 <div class="prezzo">
-                    <p>{{ store.ArrayObjetcOfDay[store.zero].prezzo }}</p>
+                    <p>{{ items[zero].prezzo }}</p>
 
                 </div>
                 <div class="border-top border-light border-opacity-25 icone">
-                    <template v-for="oggetto in store.ArrayIcone">
+                    <template v-for="oggetto in ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -118,23 +118,23 @@ export default {
 
         </div>
         <div class="my-width mx-1 my-2">
-            <img :src="store.ArrayObjetcOfDay[store.primo].img" alt="">
+            <img :src="items[primo].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in store.stelline">
-                    <template v-if="store.ArrayObjetcOfDay[store.primo].voto >= voto">
+                <span v-for="voto in stelline">
+                    <template v-if="items[primo].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ store.ArrayObjetcOfDay[store.primo].title }}</p>
+                <p>{{ items[primo].title }}</p>
                 <div class="prezzo">
-                    <p>{{ store.ArrayObjetcOfDay[store.primo].prezzo }}</p>
+                    <p>{{ items[primo].prezzo }}</p>
 
                 </div>
                 <div class="border-top border-light border-opacity-25 icone">
-                    <template v-for="oggetto in store.ArrayIcone">
+                    <template v-for="oggetto in ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -145,23 +145,23 @@ export default {
 
         </div>
         <div class="my-width mx-1 my-2">
-            <img :src="store.ArrayObjetcOfDay[store.secondo].img" alt="">
+            <img :src="items[secondo].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in store.stelline">
-                    <template v-if="store.ArrayObjetcOfDay[store.secondo].voto >= voto">
+                <span v-for="voto in stelline">
+                    <template v-if="items[secondo].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ store.ArrayObjetcOfDay[store.secondo].title }}</p>
+                <p>{{ items[secondo].title }}</p>
                 <div class="prezzo">
-                    <p>{{ store.ArrayObjetcOfDay[store.secondo].prezzo }}</p>
+                    <p>{{ items[secondo].prezzo }}</p>
 
                 </div>
                 <div class="border-top border-light border-opacity-25 icone">
-                    <template v-for="oggetto in store.ArrayIcone">
+                    <template v-for="oggetto in ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -172,23 +172,23 @@ export default {
 
         </div>
         <div class="my-width mx-1 my-2">
-            <img :src="store.ArrayObjetcOfDay[store.terzo].img" alt="">
+            <img :src="items[terzo].img" alt="">
             <div class="my-bg-fascia">
-                <span v-for="voto in store.stelline">
-                    <template v-if="store.ArrayObjetcOfDay[store.terzo].voto >= voto">
+                <span v-for="voto in stelline">
+                    <template v-if="items[terzo].voto >= voto">
                         <i class="fa-solid fa-star" style="color: #ef5d60;"></i>
                     </template>
                     <template v-else>
                         <i class="fa-solid fa-star"></i>
                     </template>
                 </span>
-                <p>{{ store.ArrayObjetcOfDay[store.terzo].title }}</p>
+                <p>{{ items[terzo].title }}</p>
                 <div class="prezzo">
-                    <p>{{ store.ArrayObjetcOfDay[store.terzo].prezzo }}</p>
+                    <p>{{ items[terzo].prezzo }}</p>
 
                 </div>
                 <div class="border-top border-light border-opacity-25 icone">
-                    <template v-for="oggetto in store.ArrayIcone">
+                    <template v-for="oggetto in ArrayIcone">
                         <div class="col-3 text-center">
                             <i class="mx-2" :class="oggetto.icon"></i>
                         </div>
@@ -198,11 +198,6 @@ export default {
             </div>
 
         </div>
-
-
-
-
-
 
         <button
             class="position-absolute top-50 start-0 translate-middle-y py-2 px-3 rounded-circle bg-transparent text-light border-light"
@@ -219,7 +214,6 @@ export default {
 
 <style lang="scss" scoped>
 @use'../styles/-Variabili.scss' as*;
-
 
 hr {
     color: $primary;
