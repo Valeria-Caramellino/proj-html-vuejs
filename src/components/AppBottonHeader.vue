@@ -45,6 +45,7 @@ export default {
 section {
     height: 100vh;
     background-image: url(../assets/main-banner-01.jpg);
+    background-size: cover;
 
     div.skewed {
         transform: skew(-20deg);
